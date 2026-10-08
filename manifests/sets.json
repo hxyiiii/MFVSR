@@ -1,0 +1,11 @@
+{
+  "lite3000": 3000,
+  "audit300": 300,
+  "primary_nonbox": 2499,
+  "box_pool": 501,
+  "paper_common_nonbox": 2298,
+  "paper_common_all_styles": 2762,
+  "paper_box_common": 464,
+  "audit300_original_ordered_file_sha256": "7b33b4368c03c359aa02a51179bebc6bc7540360bbf1586fcbd6277cfe28c95f",
+  "note": "paper_common lists describe the six-baseline snapshot; Audit300 remains fixed for new methods"
+}

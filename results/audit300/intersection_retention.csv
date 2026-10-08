@@ -1,0 +1,35 @@
+axis_family,grouping,group,full_count,common_evaluable_count,common_evaluable_retention_rate,strict_common_complete_count,strict_common_complete_retention_rate
+data_dimension,source,AI-Generated,89,89,1.0,6,0.06741573033707865
+data_dimension,source,Real-HQ,123,123,1.0,0,0.0
+data_dimension,source,Real-LQ,88,88,1.0,0,0.0
+data_dimension,resolution_class,1080p-class,123,123,1.0,0,0.0
+data_dimension,resolution_class,720p-class,177,177,1.0,6,0.03389830508474576
+data_dimension,duration_class,long_gt_30s,10,10,1.0,0,0.0
+data_dimension,duration_class,medium_10_to_30s,122,122,1.0,0,0.0
+data_dimension,duration_class,short_le_10s,168,168,1.0,6,0.03571428571428571
+data_dimension,difficulty_tier,Easy,93,93,1.0,2,0.021505376344086023
+data_dimension,difficulty_tier,Hard,110,110,1.0,2,0.01818181818181818
+data_dimension,difficulty_tier,Medium,97,97,1.0,2,0.020618556701030927
+subtitle_factor,spatial_layout,Dynamic,145,145,1.0,2,0.013793103448275862
+subtitle_factor,spatial_layout,Fixed,155,155,1.0,4,0.025806451612903226
+subtitle_factor,temporal_behavior,Animated,150,150,1.0,5,0.03333333333333333
+subtitle_factor,temporal_behavior,Static,150,150,1.0,1,0.006666666666666667
+subtitle_factor,visual_style,Decorated,96,96,1.0,1,0.010416666666666666
+subtitle_factor,visual_style,Plain,107,107,1.0,2,0.018691588785046728
+subtitle_factor,visual_style,Stylized,97,97,1.0,3,0.030927835051546393
+subtitle_factor,language_mode,Bilingual,150,150,1.0,3,0.02
+subtitle_factor,language_mode,Monolingual,150,150,1.0,3,0.02
+interaction,source+difficulty_tier,AI-Generated × Easy,29,29,1.0,2,0.06896551724137931
+interaction,source+difficulty_tier,AI-Generated × Hard,30,30,1.0,2,0.06666666666666667
+interaction,source+difficulty_tier,AI-Generated × Medium,30,30,1.0,2,0.06666666666666667
+interaction,source+difficulty_tier,Real-HQ × Easy,35,35,1.0,0,0.0
+interaction,source+difficulty_tier,Real-HQ × Hard,51,51,1.0,0,0.0
+interaction,source+difficulty_tier,Real-HQ × Medium,37,37,1.0,0,0.0
+interaction,source+difficulty_tier,Real-LQ × Easy,29,29,1.0,0,0.0
+interaction,source+difficulty_tier,Real-LQ × Hard,29,29,1.0,0,0.0
+interaction,source+difficulty_tier,Real-LQ × Medium,30,30,1.0,0,0.0
+interaction,resolution_class+duration_class,1080p-class × medium_10_to_30s,60,60,1.0,0,0.0
+interaction,resolution_class+duration_class,1080p-class × short_le_10s,63,63,1.0,0,0.0
+interaction,resolution_class+duration_class,720p-class × long_gt_30s,10,10,1.0,0,0.0
+interaction,resolution_class+duration_class,720p-class × medium_10_to_30s,62,62,1.0,0,0.0
+interaction,resolution_class+duration_class,720p-class × short_le_10s,105,105,1.0,6,0.05714285714285714

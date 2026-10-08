@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="300" viewBox="0 0 1150 300" role="img" aria-labelledby="title desc">
+  <title id="title">Compact MFVSR logo</title>
+  <desc id="desc">Compact horizontal MFVSR benchmark logo for use inside paper figures.</desc>
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#243B61"/><stop offset="1" stop-color="#172235"/>
+    </linearGradient>
+    <linearGradient id="subtitleFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.64" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wordAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D86B7E"/><stop offset="0.34" stop-color="#E39B3B"/><stop offset="0.67" stop-color="#4F93C2"/><stop offset="1" stop-color="#8874BD"/>
+    </linearGradient>
+  </defs>
+  <g id="MFVSR_MARK" transform="translate(25 25) scale(.78)">
+    <rect x="42" y="42" width="236" height="236" rx="56" fill="#FFFFFF" stroke="#DDE4ED" stroke-width="4"/>
+    <rect x="67" y="67" width="186" height="186" rx="36" fill="#1D2F4D"/>
+    <path d="M91 32H151 M32 91V151" fill="none" stroke="#D86B7E" stroke-width="18" stroke-linecap="round"/>
+    <path d="M169 32H229 M288 91V151" fill="none" stroke="#E39B3B" stroke-width="18" stroke-linecap="round"/>
+    <path d="M32 169V229 M91 288H151" fill="none" stroke="#4F93C2" stroke-width="18" stroke-linecap="round"/>
+    <path d="M288 169V229 M169 288H229" fill="none" stroke="#8874BD" stroke-width="18" stroke-linecap="round"/>
+    <path d="M91 112C116 88 140 91 160 111C182 133 204 127 230 99" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="8" stroke-linecap="round"/>
+    <rect x="91" y="179" width="128" height="16" rx="8" fill="url(#subtitleFade)"/>
+    <rect x="112" y="204" width="88" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.66"/>
+    <circle cx="220" cy="187" r="4" fill="#FFFFFF" fill-opacity="0.65"/>
+    <circle cx="231" cy="191" r="2.5" fill="#FFFFFF" fill-opacity="0.42"/>
+    <path d="M226 151L232 166L247 172L232 178L226 193L220 178L205 172L220 166Z" fill="#FFFFFF"/>
+    <path d="M249 136L252 144L260 147L252 150L249 158L246 150L238 147L246 144Z" fill="#79B1D2"/>
+  </g>
+  <g id="MFVSR_WORDMARK" transform="translate(300 0)">
+    <text x="0" y="165" fill="#172235" font-family="Arial, Helvetica, sans-serif" font-size="130" font-weight="800" textLength="578" lengthAdjust="spacingAndGlyphs">MFVSR</text>
+    <rect x="3" y="188" width="578" height="12" rx="6" fill="url(#wordAccent)"/>
+    <text x="4" y="240" fill="#68768A" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" textLength="578" lengthAdjust="spacingAndGlyphs">VIDEO SUBTITLE REMOVAL BENCHMARK</text>
+  </g>
+</svg>

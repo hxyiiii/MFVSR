@@ -1,0 +1,7 @@
+model,axis_family,grouping,group,total,complete_success,evaluable_partial,evaluable_total,failure_or_missing,failure_rate,incomplete_rate,mean_temporal_coverage,mean_spatial_coverage,mean_spatiotemporal_coverage,failure_breakdown_json
+clear,overall,all,all,300,6,294,300,0,0.0,0.98,0.8565404170413918,0.99666789334992,0.8535783347035507,"{""complete_success"": 6, ""evaluable_partial"": 294}"
+propainter,overall,all,all,300,300,0,300,0,0.0,0.0,1.0,1.0,1.0,"{""complete_success"": 300}"
+minimax,overall,all,all,300,108,192,300,0,0.0,0.64,0.9939899189902796,1.0,0.9939899189902796,"{""complete_success"": 108, ""evaluable_partial"": 192}"
+omnimattezero,overall,all,all,300,82,218,300,0,0.0,0.7266666666666667,0.9850822265372657,1.0,0.9850822265372657,"{""complete_success"": 82, ""evaluable_partial"": 218}"
+effecterase,overall,all,all,300,9,291,300,0,0.0,0.97,0.4310423459991605,1.0,0.4310423459991605,"{""complete_success"": 9, ""evaluable_partial"": 291}"
+diffueraser,overall,all,all,300,216,84,300,0,0.0,0.28,0.998515810224946,1.0,0.998515810224946,"{""complete_success"": 216, ""evaluable_partial"": 84}"

@@ -1,0 +1,9 @@
+# Install PyTorch/torchvision from the ROCm channel appropriate to the server first.
+# The remaining versions are intentionally pinned for the benchmark release.
+numpy==1.26.4
+opencv-python-headless==5.0.0
+scikit-image==0.20.0
+pandas==2.3.3
+pyarrow==25.0.0
+lpips==0.1.4
+DISTS-pytorch==0.1

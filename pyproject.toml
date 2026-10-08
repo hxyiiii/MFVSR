@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mfasr-eval"
+version = "2.0.0"
+description = "Reproducible spatially decoupled evaluation and analysis for MFASR"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24,<3",
+  "opencv-python-headless>=4.8,<6",
+  "scikit-image>=0.20,<1",
+  "pandas>=2,<3",
+  "pyarrow>=14,<26",
+  "torch>=2.5,<3",
+  "torchvision>=0.20,<1",
+  "lpips==0.1.4",
+  "DISTS-pytorch==0.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+figures = ["matplotlib>=3.7,<4"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mfasr_eval*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

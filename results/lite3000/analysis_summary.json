@@ -1,0 +1,37 @@
+{
+  "metadata_count": 3000,
+  "models": [
+    "clear",
+    "propainter",
+    "minimax",
+    "omnimattezero",
+    "effecterase",
+    "diffueraser"
+  ],
+  "common_evaluable_count": 2298,
+  "strict_common_complete_count": 80,
+  "box_style_count": 501,
+  "box_stress_common_count": 464,
+  "native_counts": {
+    "clear": 2999,
+    "propainter": 2949,
+    "minimax": 2871,
+    "omnimattezero": 2885,
+    "effecterase": 2927,
+    "diffueraser": 2970
+  },
+  "native_primary_quality_counts": {
+    "clear": 2499,
+    "propainter": 2456,
+    "minimax": 2392,
+    "omnimattezero": 2407,
+    "effecterase": 2436,
+    "diffueraser": 2474
+  },
+  "record_audit": {
+    "require_terminal_records": true,
+    "require_current_records": true,
+    "checked_model_sample_records": 18000,
+    "issues": 0
+  }
+}

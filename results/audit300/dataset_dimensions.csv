@@ -1,0 +1,36 @@
+axis_family,grouping,group,sample_count,sample_fraction
+overall,all,all,300,1.0
+data_dimension,source,AI-Generated,89,0.2966666666666667
+data_dimension,source,Real-HQ,123,0.41
+data_dimension,source,Real-LQ,88,0.29333333333333333
+data_dimension,resolution_class,1080p-class,123,0.41
+data_dimension,resolution_class,720p-class,177,0.59
+data_dimension,duration_class,long_gt_30s,10,0.03333333333333333
+data_dimension,duration_class,medium_10_to_30s,122,0.4066666666666667
+data_dimension,duration_class,short_le_10s,168,0.56
+data_dimension,difficulty_tier,Easy,93,0.31
+data_dimension,difficulty_tier,Hard,110,0.36666666666666664
+data_dimension,difficulty_tier,Medium,97,0.3233333333333333
+subtitle_factor,spatial_layout,Dynamic,145,0.48333333333333334
+subtitle_factor,spatial_layout,Fixed,155,0.5166666666666667
+subtitle_factor,temporal_behavior,Animated,150,0.5
+subtitle_factor,temporal_behavior,Static,150,0.5
+subtitle_factor,visual_style,Decorated,96,0.32
+subtitle_factor,visual_style,Plain,107,0.3566666666666667
+subtitle_factor,visual_style,Stylized,97,0.3233333333333333
+subtitle_factor,language_mode,Bilingual,150,0.5
+subtitle_factor,language_mode,Monolingual,150,0.5
+interaction,source+difficulty_tier,AI-Generated × Easy,29,0.09666666666666666
+interaction,source+difficulty_tier,AI-Generated × Hard,30,0.1
+interaction,source+difficulty_tier,AI-Generated × Medium,30,0.1
+interaction,source+difficulty_tier,Real-HQ × Easy,35,0.11666666666666667
+interaction,source+difficulty_tier,Real-HQ × Hard,51,0.17
+interaction,source+difficulty_tier,Real-HQ × Medium,37,0.12333333333333334
+interaction,source+difficulty_tier,Real-LQ × Easy,29,0.09666666666666666
+interaction,source+difficulty_tier,Real-LQ × Hard,29,0.09666666666666666
+interaction,source+difficulty_tier,Real-LQ × Medium,30,0.1
+interaction,resolution_class+duration_class,1080p-class × medium_10_to_30s,60,0.2
+interaction,resolution_class+duration_class,1080p-class × short_le_10s,63,0.21
+interaction,resolution_class+duration_class,720p-class × long_gt_30s,10,0.03333333333333333
+interaction,resolution_class+duration_class,720p-class × medium_10_to_30s,62,0.20666666666666667
+interaction,resolution_class+duration_class,720p-class × short_le_10s,105,0.35

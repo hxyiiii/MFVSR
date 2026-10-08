@@ -1,0 +1,36 @@
+axis_family,grouping,group,full_count,common_evaluable_count,common_evaluable_retention_rate,strict_common_complete_count,strict_common_complete_retention_rate
+data_dimension,source,AI-Generated,1000,834,0.834,79,0.079
+data_dimension,source,Real-HQ,1000,761,0.761,0,0.0
+data_dimension,source,Real-LQ,1000,703,0.703,1,0.001
+data_dimension,resolution_class,1080p-class,1002,762,0.7604790419161677,0,0.0
+data_dimension,resolution_class,720p-class,1998,1536,0.7687687687687688,80,0.04004004004004004
+data_dimension,duration_class,long_gt_30s,181,47,0.2596685082872928,0,0.0
+data_dimension,duration_class,medium_10_to_30s,721,581,0.8058252427184466,0,0.0
+data_dimension,duration_class,short_le_10s,2098,1670,0.7959961868446139,80,0.03813155386081983
+data_dimension,difficulty_tier,Easy,502,346,0.6892430278884463,6,0.01195219123505976
+data_dimension,difficulty_tier,Hard,1127,919,0.8154392191659272,35,0.031055900621118012
+data_dimension,difficulty_tier,Medium,1371,1033,0.7534646243617797,39,0.028446389496717725
+subtitle_factor,spatial_layout,Dynamic,1499,1183,0.7891927951967979,46,0.030687124749833223
+subtitle_factor,spatial_layout,Fixed,1501,1115,0.7428381079280479,34,0.022651565622918056
+subtitle_factor,temporal_behavior,Animated,1499,1146,0.7645096731154103,40,0.0266844563042028
+subtitle_factor,temporal_behavior,Static,1501,1152,0.7674883411059293,40,0.02664890073284477
+subtitle_factor,visual_style,Decorated,1005,461,0.45870646766169154,16,0.015920398009950248
+subtitle_factor,visual_style,Plain,999,920,0.9209209209209209,29,0.02902902902902903
+subtitle_factor,visual_style,Stylized,996,917,0.9206827309236948,35,0.035140562248995984
+subtitle_factor,language_mode,Bilingual,1505,1220,0.8106312292358804,47,0.03122923588039867
+subtitle_factor,language_mode,Monolingual,1495,1078,0.7210702341137124,33,0.022073578595317726
+interaction,source+difficulty_tier,AI-Generated × Easy,168,126,0.75,6,0.03571428571428571
+interaction,source+difficulty_tier,AI-Generated × Hard,375,333,0.888,34,0.09066666666666667
+interaction,source+difficulty_tier,AI-Generated × Medium,457,375,0.8205689277899344,39,0.08533916849015317
+interaction,source+difficulty_tier,Real-HQ × Easy,167,113,0.6766467065868264,0,0.0
+interaction,source+difficulty_tier,Real-HQ × Hard,376,344,0.9148936170212766,0,0.0
+interaction,source+difficulty_tier,Real-HQ × Medium,457,304,0.6652078774617067,0,0.0
+interaction,source+difficulty_tier,Real-LQ × Easy,167,107,0.6407185628742516,0,0.0
+interaction,source+difficulty_tier,Real-LQ × Hard,376,242,0.6436170212765957,1,0.0026595744680851063
+interaction,source+difficulty_tier,Real-LQ × Medium,457,354,0.774617067833698,0,0.0
+interaction,resolution_class+duration_class,1080p-class × long_gt_30s,69,16,0.2318840579710145,0,0.0
+interaction,resolution_class+duration_class,1080p-class × medium_10_to_30s,220,167,0.759090909090909,0,0.0
+interaction,resolution_class+duration_class,1080p-class × short_le_10s,713,579,0.8120617110799438,0,0.0
+interaction,resolution_class+duration_class,720p-class × long_gt_30s,112,31,0.2767857142857143,0,0.0
+interaction,resolution_class+duration_class,720p-class × medium_10_to_30s,501,414,0.8263473053892215,0,0.0
+interaction,resolution_class+duration_class,720p-class × short_le_10s,1385,1091,0.787725631768953,80,0.05776173285198556

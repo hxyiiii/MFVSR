@@ -1,0 +1,304 @@
+{
+  "manifest": "manifests/benchmark_manifest.json",
+  "input_root": "subtitled_data",
+  "output_root": "outputs/evaluation",
+  "runtime": {
+    "ffmpeg": "ffmpeg",
+    "ffprobe": "ffprobe",
+    "fps_tolerance": 0.01,
+    "lock_stale_hours": 2.0,
+    "dists_nonfinite_action": "gpu_retry",
+    "dists_l2pool_channel_chunk": 16,
+    "dists_native_gpu_for_conditioned": true,
+    "dists_overall_max_input_long_side": 1920,
+    "raft_max_input_long_side": 960,
+    "raft_resize_trigger_long_side": 1920,
+    "torch_home": "outputs/torch_cache"
+  },
+  "models": {
+    "your_method": {
+      "setting": "mask-guided",
+      "result_root": "predictions/your_method",
+      "geometry": "full_frame_resize_to_gt",
+      "temporal": "verified_prefix"
+    }
+  },
+  "evaluation_profiles": {
+    "lite3000": {
+      "output_root": "outputs/lite3000",
+      "sampling": {
+        "mode": "stratified_fixed_budget",
+        "subtitle_active_frames": 32,
+        "global_frames": 16,
+        "subtitle_active_pairs": 24,
+        "global_pairs": 8
+      },
+      "metrics": {
+        "enabled": [
+          "psnr",
+          "lpips",
+          "tc"
+        ],
+        "region_matrix": {
+          "psnr": [
+            "overall",
+            "bbox",
+            "subtitle",
+            "bbox_bg",
+            "outside"
+          ],
+          "lpips": [
+            "overall",
+            "bbox",
+            "subtitle",
+            "bbox_bg",
+            "outside"
+          ],
+          "tc": [
+            "bbox",
+            "outside"
+          ]
+        }
+      }
+    },
+    "audit300": {
+      "output_root": "outputs/audit300",
+      "sampling": {
+        "mode": "stratified_fixed_budget",
+        "subtitle_active_frames": 32,
+        "global_frames": 16,
+        "subtitle_active_pairs": 24,
+        "global_pairs": 8
+      },
+      "metrics": {
+        "enabled": [
+          "psnr",
+          "ssim",
+          "lpips",
+          "dists",
+          "twe",
+          "tc"
+        ],
+        "region_matrix": {
+          "psnr": [
+            "overall",
+            "bbox",
+            "subtitle",
+            "bbox_bg",
+            "outside"
+          ],
+          "ssim": [
+            "overall",
+            "bbox",
+            "subtitle",
+            "bbox_bg",
+            "outside"
+          ],
+          "lpips": [
+            "overall",
+            "bbox",
+            "subtitle",
+            "bbox_bg",
+            "outside"
+          ],
+          "dists": [
+            "overall",
+            "subtitle",
+            "bbox_bg"
+          ],
+          "twe": [
+            "bbox",
+            "outside"
+          ],
+          "tc": [
+            "bbox",
+            "outside"
+          ]
+        }
+      }
+    }
+  },
+  "metrics": {
+    "enabled": [
+      "psnr",
+      "ssim",
+      "lpips",
+      "dists",
+      "twe",
+      "tc"
+    ],
+    "color_space": "RGB",
+    "mask_threshold": 127,
+    "max_glyph_outside_bbox_pixels": 0,
+    "region_matrix": {
+      "psnr": [
+        "overall",
+        "bbox",
+        "subtitle",
+        "bbox_bg",
+        "outside"
+      ],
+      "ssim": [
+        "overall",
+        "bbox",
+        "subtitle",
+        "bbox_bg",
+        "outside"
+      ],
+      "lpips": [
+        "overall",
+        "bbox",
+        "subtitle",
+        "bbox_bg",
+        "outside"
+      ],
+      "dists": [
+        "overall",
+        "subtitle",
+        "bbox_bg"
+      ],
+      "twe": [
+        "overall",
+        "bbox",
+        "outside"
+      ],
+      "tc": [
+        "overall",
+        "bbox",
+        "outside"
+      ]
+    },
+    "ssim": {
+      "win_size": 11,
+      "gaussian_weights": true,
+      "sigma": 1.5,
+      "use_sample_covariance": false,
+      "data_range": 1.0
+    },
+    "lpips": {
+      "backbone": "alex",
+      "version": "0.1",
+      "input_range": [
+        -1,
+        1
+      ]
+    },
+    "dists": {
+      "input_range": [
+        0,
+        1
+      ],
+      "conditioned_regions": [
+        "subtitle",
+        "bbox_bg"
+      ],
+      "context": "same_bbox_crop",
+      "context_margin": 16,
+      "minimum_crop_size": 64,
+      "nonfinite_policy": "cpu_fallback_same_weights"
+    },
+    "temporal": {
+      "backend": "raft_large",
+      "weights": "torchvision_default",
+      "flow_source": "clean_target",
+      "occlusion": "forward_backward_consistency",
+      "occlusion_alpha": 0.01,
+      "occlusion_beta": 0.5,
+      "warp_error": "mean_squared_rgb_0_1",
+      "change_error": "mean_absolute_delta_residual_rgb_0_1"
+    }
+  },
+  "records": {
+    "write_frames_parquet": true
+  },
+  "analysis": {
+    "require_terminal_records": true,
+    "require_current_records": true,
+    "metadata_path": "manifests/sample_metadata.json",
+    "output_dir": "outputs/analysis",
+    "bootstrap_samples": 1000,
+    "groupings": [
+      "source",
+      "resolution_class",
+      "duration_class",
+      "difficulty_tier",
+      "spatial_layout",
+      "temporal_behavior",
+      "visual_style",
+      "language_mode"
+    ],
+    "interactions": [
+      "source+difficulty_tier",
+      "resolution_class+duration_class"
+    ],
+    "metadata": {
+      "expected_sample_count": 3000,
+      "expected_categories": {
+        "source": [
+          "Real-HQ",
+          "Real-LQ",
+          "AI-Generated"
+        ],
+        "resolution_class": [
+          "720p-class",
+          "1080p-class"
+        ],
+        "duration_class": [
+          "short_le_10s",
+          "medium_10_to_30s",
+          "long_gt_30s"
+        ],
+        "difficulty_tier": [
+          "Easy",
+          "Medium",
+          "Hard"
+        ],
+        "spatial_layout": [
+          "Fixed",
+          "Dynamic"
+        ],
+        "temporal_behavior": [
+          "Static",
+          "Animated"
+        ],
+        "visual_style": [
+          "Plain",
+          "Decorated",
+          "Stylized"
+        ],
+        "language_mode": [
+          "Monolingual",
+          "Bilingual"
+        ]
+      },
+      "resolution_short_side_threshold": 900,
+      "short_duration_max_seconds": 10.0,
+      "medium_duration_max_seconds": 30.0,
+      "checkpoint_every": 50,
+      "probe_workers": 16,
+      "difficulty_weights": {
+        "spatial_layout": {
+          "Fixed": 0,
+          "Dynamic": 2
+        },
+        "temporal_behavior": {
+          "Static": 0,
+          "Animated": 1
+        },
+        "visual_style": {
+          "Plain": 0,
+          "Decorated": 1,
+          "Stylized": 2
+        },
+        "language_mode": {
+          "Monolingual": 0,
+          "Bilingual": 1
+        },
+        "cutoffs": {
+          "easy_max": 1,
+          "medium_max": 3
+        }
+      }
+    }
+  }
+}

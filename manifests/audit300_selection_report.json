@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "seed": 20260916,
+  "models": [
+    "clear",
+    "diffueraser",
+    "effecterase",
+    "minimax",
+    "omnimattezero",
+    "propainter"
+  ],
+  "six_model_common_count": 2461,
+  "excluded_id_count": 100,
+  "box_style_common_count": 389,
+  "main_candidate_count": 1972,
+  "selected_count": 300,
+  "box_stress_selected_count": 50,
+  "core_ids_sha256": "7b33b4368c03c359aa02a51179bebc6bc7540360bbf1586fcbd6277cfe28c95f",
+  "balance_counts": {
+    "source": {
+      "AI-Generated": 89,
+      "Real-HQ": 123,
+      "Real-LQ": 88
+    },
+    "resolution_class": {
+      "1080p-class": 123,
+      "720p-class": 177
+    },
+    "duration_class": {
+      "long_gt_30s": 10,
+      "medium_10_to_30s": 122,
+      "short_le_10s": 168
+    },
+    "difficulty_tier": {
+      "Easy": 93,
+      "Hard": 110,
+      "Medium": 97
+    },
+    "spatial_layout": {
+      "Dynamic": 145,
+      "Fixed": 155
+    },
+    "temporal_behavior": {
+      "Animated": 150,
+      "Static": 150
+    },
+    "visual_style": {
+      "Decorated": 96,
+      "Plain": 107,
+      "Stylized": 97
+    },
+    "language_mode": {
+      "Bilingual": 150,
+      "Monolingual": 150
+    },
+    "source+difficulty_tier": {
+      "AI-Generated × Easy": 29,
+      "AI-Generated × Hard": 30,
+      "AI-Generated × Medium": 30,
+      "Real-HQ × Easy": 35,
+      "Real-HQ × Hard": 51,
+      "Real-HQ × Medium": 37,
+      "Real-LQ × Easy": 29,
+      "Real-LQ × Hard": 29,
+      "Real-LQ × Medium": 30
+    },
+    "resolution_class+duration_class": {
+      "1080p-class × medium_10_to_30s": 60,
+      "1080p-class × short_le_10s": 63,
+      "720p-class × long_gt_30s": 10,
+      "720p-class × medium_10_to_30s": 62,
+      "720p-class × short_le_10s": 105
+    }
+  },
+  "selection_method": "deterministic marginal-and-interaction deficit greedy"
+}

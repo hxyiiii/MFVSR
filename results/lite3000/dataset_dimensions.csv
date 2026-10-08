@@ -1,0 +1,37 @@
+axis_family,grouping,group,sample_count,sample_fraction
+overall,all,all,3000,1.0
+data_dimension,source,AI-Generated,1000,0.3333333333333333
+data_dimension,source,Real-HQ,1000,0.3333333333333333
+data_dimension,source,Real-LQ,1000,0.3333333333333333
+data_dimension,resolution_class,1080p-class,1002,0.334
+data_dimension,resolution_class,720p-class,1998,0.666
+data_dimension,duration_class,long_gt_30s,181,0.060333333333333336
+data_dimension,duration_class,medium_10_to_30s,721,0.24033333333333334
+data_dimension,duration_class,short_le_10s,2098,0.6993333333333334
+data_dimension,difficulty_tier,Easy,502,0.16733333333333333
+data_dimension,difficulty_tier,Hard,1127,0.37566666666666665
+data_dimension,difficulty_tier,Medium,1371,0.457
+subtitle_factor,spatial_layout,Dynamic,1499,0.49966666666666665
+subtitle_factor,spatial_layout,Fixed,1501,0.5003333333333333
+subtitle_factor,temporal_behavior,Animated,1499,0.49966666666666665
+subtitle_factor,temporal_behavior,Static,1501,0.5003333333333333
+subtitle_factor,visual_style,Decorated,1005,0.335
+subtitle_factor,visual_style,Plain,999,0.333
+subtitle_factor,visual_style,Stylized,996,0.332
+subtitle_factor,language_mode,Bilingual,1505,0.5016666666666667
+subtitle_factor,language_mode,Monolingual,1495,0.49833333333333335
+interaction,source+difficulty_tier,AI-Generated × Easy,168,0.056
+interaction,source+difficulty_tier,AI-Generated × Hard,375,0.125
+interaction,source+difficulty_tier,AI-Generated × Medium,457,0.15233333333333332
+interaction,source+difficulty_tier,Real-HQ × Easy,167,0.05566666666666667
+interaction,source+difficulty_tier,Real-HQ × Hard,376,0.12533333333333332
+interaction,source+difficulty_tier,Real-HQ × Medium,457,0.15233333333333332
+interaction,source+difficulty_tier,Real-LQ × Easy,167,0.05566666666666667
+interaction,source+difficulty_tier,Real-LQ × Hard,376,0.12533333333333332
+interaction,source+difficulty_tier,Real-LQ × Medium,457,0.15233333333333332
+interaction,resolution_class+duration_class,1080p-class × long_gt_30s,69,0.023
+interaction,resolution_class+duration_class,1080p-class × medium_10_to_30s,220,0.07333333333333333
+interaction,resolution_class+duration_class,1080p-class × short_le_10s,713,0.23766666666666666
+interaction,resolution_class+duration_class,720p-class × long_gt_30s,112,0.037333333333333336
+interaction,resolution_class+duration_class,720p-class × medium_10_to_30s,501,0.167
+interaction,resolution_class+duration_class,720p-class × short_le_10s,1385,0.46166666666666667
