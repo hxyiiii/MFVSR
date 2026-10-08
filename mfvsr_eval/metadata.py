@@ -193,7 +193,7 @@ def build_metadata(config: dict, manifest_path: str | Path, output: str | Path, 
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Build frozen MFASR analysis metadata")
+    parser = argparse.ArgumentParser(description="Build frozen MFVSR analysis metadata")
     parser.add_argument("--config", required=True)
     parser.add_argument("--manifest")
     parser.add_argument("--output")

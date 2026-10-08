@@ -26,7 +26,7 @@ def _chunked_l2pool_forward(module, value):
 
     squared = value.square()
     outputs = []
-    chunk_size = module._mfasr_channel_chunk
+    chunk_size = module._mfvsr_channel_chunk
     for start in range(0, squared.shape[1], chunk_size):
         stop = min(start + chunk_size, squared.shape[1])
         block = torch.nn.functional.conv2d(
@@ -60,7 +60,7 @@ def patch_dists_l2pool_channel_chunks(model, chunk_size: int) -> None:
         return
     for module in model.modules():
         if module.__class__.__name__ == "L2pooling":
-            module._mfasr_channel_chunk = chunk_size
+            module._mfvsr_channel_chunk = chunk_size
             module.forward = types.MethodType(_chunked_l2pool_forward, module)
 
 

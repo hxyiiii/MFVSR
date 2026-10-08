@@ -7,7 +7,7 @@ from contextlib import redirect_stdout
 from io import StringIO
 from pathlib import Path
 
-from mfasr_eval.analyze import (
+from mfvsr_eval.analyze import (
     _score_track_rows,
     analyze,
     is_complete,
@@ -15,7 +15,7 @@ from mfasr_eval.analyze import (
     main as analyze_main,
     validate_analysis_records,
 )
-from mfasr_eval.score import SCORE_VERSION
+from mfvsr_eval.score import SCORE_VERSION
 
 
 def successful_record(video_id: str, completeness: str, coverage: float, offset: float = 0.0) -> dict:

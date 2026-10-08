@@ -34,7 +34,7 @@ from .signature import evaluation_signature_for_model
 from .temporal import make_flow_estimator, temporal_change_map, temporal_maps
 
 
-LOG = logging.getLogger("mfasr_eval")
+LOG = logging.getLogger("mfvsr_eval")
 ALLOWED_METRICS = {"psnr", "ssim", "lpips", "dists", "twe", "tc"}
 
 

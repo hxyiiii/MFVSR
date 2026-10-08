@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Paper-coming_soon-lightgrey.svg" alt="Paper: coming soon">
-  <img src="https://img.shields.io/badge/Dataset-coming_soon-yellow.svg?logo=huggingface" alt="Dataset: coming soon">
+  <img src="https://img.shields.io/badge/Dataset-Hugging_Face-yellow.svg?logo=huggingface" alt="Dataset: Hugging Face">
   <a href="./docs/evaluation.md"><img src="https://img.shields.io/badge/EVAL_TOOL-Documentation-blue.svg" alt="Evaluation toolkit"></a>
   <a href="./docs/results.md"><img src="https://img.shields.io/badge/Results-CSV-green.svg" alt="Result CSVs"></a>
 </p>
@@ -168,16 +168,18 @@ The PyTorch/torchvision version pair follows the [official version matrix](https
 Check the installation:
 
 ~~~bash
-python -c "import torch, torchvision, mfasr_eval; print('PyTorch:', torch.__version__); print('torchvision:', torchvision.__version__); print('GPU available:', torch.cuda.is_available())"
+python -c "import torch, torchvision, mfvsr_eval; print('PyTorch:', torch.__version__); print('torchvision:', torchvision.__version__); print('GPU available:', torch.cuda.is_available())"
 ffmpeg -version
 ffprobe -version
 ~~~
 
-The Python package retains its original name, mfasr_eval. All subsequent commands run inside the mfvsr Conda environment.
+The Python package is `mfvsr_eval`. Run all subsequent commands inside the `mfvsr` Conda environment.
+
+When updating an existing preview installation, reinstall the package with `python -m pip install -e .` and use a fresh output directory for evaluation.
 
 ## 2. 🎬 Prepare the dataset
 
-**Dataset download: coming soon.**
+**Dataset download:** [Hugging Face](https://huggingface.co/datasets/siiian/MFVSR). See the dataset page for download and extraction commands.
 
 Extract the paired dataset while preserving the paths in [benchmark_manifest.json](./manifests/benchmark_manifest.json):
 
@@ -231,10 +233,10 @@ Use --setting blind for a blind method. The geometry option above assumes full-f
 Lite3000 evaluates all 3,000 paired samples using PSNR, LPIPS, and Temporal Change Error (TC):
 
 ~~~bash
-python -m mfasr_eval.doctor \
+python -m mfvsr_eval.doctor \
   --config configs/local.json --profile lite3000
 
-python -m mfasr_eval.run \
+python -m mfvsr_eval.run \
   --config configs/local.json --model your_method --gpus 0 \
   --profile lite3000 --ids-file manifests/lite3000.txt
 ~~~
@@ -246,7 +248,7 @@ Use --gpus 0,1 for multiple GPUs or --gpus cpu for CPU execution.
 Aggregate the evaluation records into CSVs:
 
 ~~~bash
-python -m mfasr_eval.analyze \
+python -m mfvsr_eval.analyze \
   --config configs/local.json --model your_method \
   --profile lite3000 --ids-file manifests/lite3000.txt \
   --output-dir outputs/lite3000/analysis
@@ -260,14 +262,14 @@ Results are saved in outputs/lite3000/analysis/, including per-sample metrics, q
 Audit300 uses the frozen 300-video subset and adds SSIM, conditioned DISTS, and RAFT-based TWE-Excess diagnostics.
 
 ~~~bash
-python -m mfasr_eval.doctor \
+python -m mfvsr_eval.doctor \
   --config configs/local.json --profile audit300 --deep --device cuda:0
 
-python -m mfasr_eval.run \
+python -m mfvsr_eval.run \
   --config configs/local.json --model your_method --gpus 0 \
   --profile audit300 --ids-file manifests/audit300.txt
 
-python -m mfasr_eval.analyze \
+python -m mfvsr_eval.analyze \
   --config configs/local.json --model your_method \
   --profile audit300 --ids-file manifests/audit300.txt \
   --output-dir outputs/audit300/analysis

@@ -168,7 +168,7 @@ def validate_analysis_records(
         raise ValueError(
             f"analysis record readiness check failed for {len(issues)} of {checked} "
             f"model-sample records; examples: {examples}. "
-            "Run mfasr_eval.run for the affected model(s) and repeat analysis."
+            "Run mfvsr_eval.run for the affected model(s) and repeat analysis."
         )
     return {
         "require_terminal_records": require_terminal,
@@ -779,7 +779,7 @@ def analyze(
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Build common-evaluable/native/reliability MFASR tables"
+        description="Build common-evaluable/native/reliability MFVSR tables"
     )
     parser.add_argument("--config", required=True)
     parser.add_argument("--profile")

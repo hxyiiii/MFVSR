@@ -3,10 +3,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from mfasr_eval.profiles import apply_evaluation_profile
-from mfasr_eval.sampling import build_sampling_plan, evenly_spaced
-from mfasr_eval.selection_io import load_video_ids
-from mfasr_eval.signature import evaluation_signature_for_model
+from mfvsr_eval.profiles import apply_evaluation_profile
+from mfvsr_eval.sampling import build_sampling_plan, evenly_spaced
+from mfvsr_eval.selection_io import load_video_ids
+from mfvsr_eval.signature import evaluation_signature_for_model
 
 
 def test_evenly_spaced_and_sampling_are_deterministic():

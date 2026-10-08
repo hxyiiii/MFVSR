@@ -1,6 +1,6 @@
-"""MFASR evaluation package."""
+"""MFVSR evaluation package."""
 
-PROTOCOL_VERSION = "mfasr_spatial_decoupled_v2"
+PROTOCOL_VERSION = "mfvsr_spatial_decoupled_v2"
 SCHEMA_VERSION = "2.0"
 METRIC_DEFINITION_VERSION = "2.0.3"
 EVALUATOR_VERSION = "2.0.6"

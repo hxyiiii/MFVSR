@@ -13,14 +13,14 @@ from unittest.mock import patch
 
 import numpy as np
 
-from mfasr_eval.run import main as run_main
-from mfasr_eval.evaluator import _coverage_classification, _validate_fps_pair
-from mfasr_eval.config import load_config
-from mfasr_eval.io import load_manifest_rows, sample_from_row
-from mfasr_eval.inventory import inventory_sample
-from mfasr_eval.profiles import apply_evaluation_profile
-from mfasr_eval.reuse_records import reuse_sample
-from mfasr_eval.schema import VideoProbe
+from mfvsr_eval.run import main as run_main
+from mfvsr_eval.evaluator import _coverage_classification, _validate_fps_pair
+from mfvsr_eval.config import load_config
+from mfvsr_eval.io import load_manifest_rows, sample_from_row
+from mfvsr_eval.inventory import inventory_sample
+from mfvsr_eval.profiles import apply_evaluation_profile
+from mfvsr_eval.reuse_records import reuse_sample
+from mfvsr_eval.schema import VideoProbe
 
 
 def encode_rgb(path: Path, frames: np.ndarray, fps: int = 2) -> None:
@@ -246,7 +246,7 @@ class EndToEndTests(unittest.TestCase):
                 "HIP_VISIBLE_DEVICES": "7",
                 "CUDA_VISIBLE_DEVICES": "7",
             }),
-            patch("mfasr_eval.run.subprocess.Popen") as popen,
+            patch("mfvsr_eval.run.subprocess.Popen") as popen,
             redirect_stdout(StringIO()),
         ):
             popen.return_value.wait.return_value = 0

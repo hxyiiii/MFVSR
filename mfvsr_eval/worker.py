@@ -22,7 +22,7 @@ def shard_for(video_id: str, world_size: int) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Internal MFASR evaluation worker")
+    parser = argparse.ArgumentParser(description="Internal MFVSR evaluation worker")
     parser.add_argument("--config", required=True)
     parser.add_argument("--manifest")
     parser.add_argument("--model", action="append", required=True)

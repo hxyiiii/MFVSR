@@ -6,15 +6,15 @@ from unittest.mock import Mock
 import numpy as np
 import torch
 
-from mfasr_eval.metrics import (
+from mfvsr_eval.metrics import (
     DISTSNonFiniteError,
     PerceptualMetrics,
     masked_map_mean,
     patch_dists_l2pool_channel_chunks,
     ssim_scalar_and_map,
 )
-from mfasr_eval.record_compatibility import runtime_record_is_compatible
-from mfasr_eval.temporal import TorchvisionRAFT, temporal_change_map, temporal_maps
+from mfvsr_eval.record_compatibility import runtime_record_is_compatible
+from mfvsr_eval.temporal import TorchvisionRAFT, temporal_change_map, temporal_maps
 
 
 class ZeroFlow:

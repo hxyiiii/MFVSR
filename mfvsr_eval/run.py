@@ -20,7 +20,7 @@ from .worker import shard_for
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Resume-safe single/multi-GPU MFASR evaluator")
+    parser = argparse.ArgumentParser(description="Resume-safe single/multi-GPU MFVSR evaluator")
     parser.add_argument("--config", required=True)
     parser.add_argument("--manifest")
     parser.add_argument("--model", action="append", required=True, help="name, comma list, or all")
@@ -129,7 +129,7 @@ def main(argv: list[str] | None = None) -> int:
         for _ in range(args.workers_per_gpu):
             command = [
                 sys.executable,
-                "-m", "mfasr_eval.worker",
+                "-m", "mfvsr_eval.worker",
                 "--config", args.config,
                 "--manifest", manifest,
                 "--output-root", str(output_root),

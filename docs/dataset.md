@@ -6,7 +6,7 @@ The manifest contains 3,000 paired samples, evenly divided between Real-HQ, Real
 
 The 953 auxiliary videos mentioned in the paper are separate from these 3,000 paired samples. They are not counted in the evaluation lists or included in this prepared repository.
 
-Video payloads are hosted separately from GitHub. The download location is pending.
+Video payloads are hosted on [Hugging Face](https://huggingface.co/datasets/siiian/MFVSR). Follow the dataset page to download, verify, and extract the archives.
 
 ## Directory layout
 

@@ -8,8 +8,8 @@ from pathlib import Path
 
 import numpy as np
 
-from mfasr_eval.fit_anchors import percentile
-from mfasr_eval.metadata import (
+from mfvsr_eval.fit_anchors import percentile
+from mfvsr_eval.metadata import (
     difficulty,
     duration_class,
     metadata_signature,
@@ -18,10 +18,10 @@ from mfasr_eval.metadata import (
     source_class,
     validate_dimension_coverage,
 )
-from mfasr_eval.metrics import RegionAccumulator, masked_psnr
-from mfasr_eval.regions import load_bboxes, make_regions, rasterize_bboxes
-from mfasr_eval.score import SCORE_VERSION, score_record
-from mfasr_eval.worker import shard_for
+from mfvsr_eval.metrics import RegionAccumulator, masked_psnr
+from mfvsr_eval.regions import load_bboxes, make_regions, rasterize_bboxes
+from mfvsr_eval.score import SCORE_VERSION, score_record
+from mfvsr_eval.worker import shard_for
 
 
 WEIGHTS = {
