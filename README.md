@@ -31,7 +31,7 @@ The figure summarizes the complete benchmark in the paper. This release focuses 
 
 Diagnostic examples from Appendix E of the paper, with the subtitled input, clean target, and six methods shown side by side. CLEAR is blind; the other methods are mask-guided. Click any image to view its original resolution.
 
-### 🧩 Restoration · Shadowed bilingual subtitles
+### 🧩 Restoration Fidelity · Shadowed bilingual subtitles
 
 <p align="center"><i>Local crop · Frame 0 · Compare residual text and reconstructed scene texture with the clean target.</i></p>
 
@@ -50,7 +50,7 @@ Diagnostic examples from Appendix E of the paper, with the subtitled input, clea
   </tr>
 </table>
 
-### 🎨 Preservation · Scene color and geometry
+### 🎨 Preservation Fidelity · Scene color and geometry
 
 <p align="center"><i>Full frame · Frame 47 · Compare changes beyond the subtitle region.</i></p>
 
@@ -69,8 +69,7 @@ Diagnostic examples from Appendix E of the paper, with the subtitled input, clea
   </tr>
 </table>
 
-<details>
-<summary><b>⏱️ Temporal fidelity · Bouncing neon · Three consecutive frames</b></summary>
+### ⏱️ Temporal Fidelity · Bouncing neon · Three consecutive frames
 
 Each strip shows frames 0 → 1 → 2 from the same shared crop. Compare both subtitle remnants and changes relative to the clean target.
 
@@ -92,8 +91,6 @@ Each strip shows frames 0 → 1 → 2 from the same shared crop. Compare both su
     <td align="center" width="50%"><b>EffectErase</b><br><a href="./imgs/qualitative/temporal_effecterase.png"><img src="./imgs/qualitative/temporal_effecterase.png" alt="T1 / Bouncing neon: EffectErase" width="400"></a></td>
   </tr>
 </table>
-
-</details>
 
 [Case information and image provenance](./docs/qualitative_results.md)
 
