@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Paper-coming_soon-lightgrey.svg" alt="Paper: coming soon">
-  <img src="https://img.shields.io/badge/Dataset-Hugging_Face-yellow.svg?logo=huggingface" alt="Dataset: Hugging Face">
+  <a href="https://huggingface.co/datasets/siiian/MFVSR"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-yellow.svg?logo=huggingface" alt="Dataset: Hugging Face"></a>
   <a href="./docs/evaluation.md"><img src="https://img.shields.io/badge/EVAL_TOOL-Documentation-blue.svg" alt="Evaluation toolkit"></a>
   <a href="./docs/results.md"><img src="https://img.shields.io/badge/Results-CSV-green.svg" alt="Result CSVs"></a>
 </p>
