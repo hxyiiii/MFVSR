@@ -3,13 +3,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Paper-coming_soon-lightgrey.svg" alt="Paper: coming soon">
+  <a href="https://arxiv.org/abs/2610.18461"><img src="https://img.shields.io/badge/arXiv-2610.18461-b31b1b.svg" alt="Paper: arXiv 2610.18461"></a>
   <a href="https://huggingface.co/datasets/siiian/MFVSR"><img src="https://img.shields.io/badge/Dataset-Hugging_Face-yellow.svg?logo=huggingface" alt="Dataset: Hugging Face"></a>
   <a href="./docs/evaluation.md"><img src="https://img.shields.io/badge/EVAL_TOOL-Documentation-blue.svg" alt="Evaluation toolkit"></a>
   <a href="./docs/results.md"><img src="https://img.shields.io/badge/Results-CSV-green.svg" alt="Result CSVs"></a>
 </p>
 
-Official repository for **"MFVSR: A Multi-Style and Fine-Grained Benchmark for Video Subtitle Removal"**.
+Official repository for **["MFVSR: A Multi-Style and Fine-Grained Benchmark for Video Subtitle Removal"](https://arxiv.org/abs/2610.18461)**.
 
 # 🌠 Overview
 
@@ -278,9 +278,19 @@ Pretrained metric weights may download on first use. See the [evaluation guide](
 
 # ⭐ Citation
 
-The paper link and BibTeX entry will be added when the manuscript is publicly available.
+If you find MFVSR useful in your research, please cite our [paper](https://arxiv.org/abs/2610.18461):
 
-<!-- Add the verified public paper URL and author BibTeX here. -->
+```bibtex
+@misc{huang2026mfvsr,
+  title         = {{MFVSR}: A Multi-Style and Fine-Grained Benchmark for Video Subtitle Removal},
+  author        = {Xiyan Huang and Qingdong He and Peng Tang and Bo Yin and Chaoyi Wang and Xiaobin Hu},
+  year          = {2026},
+  eprint        = {2610.18461},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2610.18461}
+}
+```
 
 # ⚖️ License
 
