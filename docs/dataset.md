@@ -4,7 +4,7 @@
 
 The manifest contains 3,000 paired samples, evenly divided between Real-HQ, Real-LQ, and AI-Generated sources. Each row identifies the subtitled input, clean ground truth, subtitle glyph mask, and bounding-box annotation.
 
-The 953 auxiliary videos mentioned in the paper are separate from these 3,000 paired samples. They are not counted in the evaluation lists or included in this prepared repository.
+The 953 auxiliary videos mentioned in the paper are separate from these 3,000 paired samples. They are not counted in the evaluation lists or included in this release.
 
 Video payloads are hosted on [Hugging Face](https://huggingface.co/datasets/siiian/MFVSR). Follow the dataset page to download, verify, and extract the archives.
 
@@ -24,6 +24,8 @@ MFVSR/
     origin_clean/
       ...
 ~~~
+
+Set `--data-root` to the directory directly containing `data_select/` and `subtitled_data/`. The README uses `data/MFVSR` as an example; replace it with your actual extraction path.
 
 The manifest is the authoritative path mapping. Do not reconstruct paths from split alone: some monolingual AI samples have an additional language directory.
 

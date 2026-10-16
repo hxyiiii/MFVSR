@@ -23,7 +23,7 @@ MFVSR provides:
 
 ![Overview of MFVSR](./imgs/overview.png)
 
-The figure summarizes the complete benchmark in the paper. This release focuses on the 3,000 paired samples; the paper's 953 auxiliary in-the-wild videos are a separate resource.
+The figure summarizes the complete benchmark in the paper. This release includes the **3,000 paired videos, evaluation toolkit, fixed evaluation lists, and result CSVs**. The 953 auxiliary in-the-wild videos are **not included in this release**.
 
 # 📊 Results
 
@@ -113,6 +113,13 @@ Each strip shows frames 0 → 1 → 2 from the same shared crop. Compare both su
 
 # 🚀 Running the Benchmark
 
+Clone the repository first:
+
+~~~bash
+git clone https://github.com/hxyiiii/MFVSR.git
+cd MFVSR
+~~~
+
 Run the following commands from the repository root.
 
 ## 1. 🛠️ Set up the Conda environment
@@ -172,7 +179,7 @@ ffprobe -version
 
 The Python package is `mfvsr_eval`. Run all subsequent commands inside the `mfvsr` Conda environment.
 
-When updating an existing preview installation, reinstall the package with `python -m pip install -e .` and use a fresh output directory for evaluation.
+When updating an existing installation, reinstall the package with `python -m pip install -e .` and use a fresh output directory for evaluation.
 
 ## 2. 🎬 Prepare the dataset
 
@@ -185,6 +192,8 @@ data/MFVSR/
 ├── data_select/       # Clean target videos
 └── subtitled_data/    # Subtitled videos, glyph masks, BBox JSONs and input masks
 ~~~
+
+**Set `--data-root` to the extracted directory that directly contains `data_select/` and `subtitled_data/`.** The commands below use `data/MFVSR` as an example. If you follow the Hugging Face instructions and extract elsewhere, replace `data/MFVSR` with that actual path (an absolute path is also accepted).
 
 [Dataset documentation](./docs/dataset.md) describes the assets and metadata. GitHub contains the manifests and fixed lists; large videos are distributed separately.
 
@@ -294,4 +303,8 @@ If you find MFVSR useful in your research, please cite our [paper](https://arxiv
 
 # ⚖️ License
 
-Code and dataset license information will be added with the public release.
+Code licensing information is pending. For dataset terms, see the [MFVSR Dataset Terms](https://huggingface.co/datasets/siiian/MFVSR/blob/main/LICENSE).
+
+# 💬 Questions and Feedback
+
+For questions or bug reports, please [open a GitHub issue](https://github.com/hxyiiii/MFVSR/issues).
